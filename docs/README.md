@@ -1,11 +1,14 @@
 # Assessing Mid Season Crop Conditions in Iowa Using Supervised Classification and NDVI
 
+![Status: Completed](https://img.shields.io/badge/Status-Completed-success)
+[![View Report](https://img.shields.io/badge/View-Full%20Report-blue?style=for-the-badge&logo=github)](https://dustinlit.github.io/Iowa-Crop-Classification-NDVI-Analysis/)
+[![Repository](https://img.shields.io/badge/GitHub-Repo-black?style=for-the-badge&logo=github)](https://github.com/dustinlit/Iowa-Crop-Classification-NDVI-Analysis)
 
-**Author:** Dustin Littlefield
-
-**Project Type:** Crop Classification
-
-**Tags:** `Agriculture` `Remote Sensing` `ArcGIS Pro` `NDVI` `Machine Learning` 
+**Author:** Dustin Littlefield  
+**Portfolio:** https://github.com/dustinlit  
+**Project Type:** `Agricultural Remote Sensing` `Crop Classification` `Vegetation Health`  
+**Technologies:** `Landsat 8` `ArcGIS Pro` `NDVI` `Machine Learning` `Random Trees`  
+**Last Updated:** March 2026
  
 ## Introduction 
 Crop modelling is an essential element in modern agriculture. It is used to limit exposure from crop losses, monitor past trends, guide future directions in crop choices, and make yield predictions for economic and food security forecasting. Crop modelling is especially valuable for regions that rely on larger acreage of fewer crop types, like corn and soybeans in the US Midwest. 

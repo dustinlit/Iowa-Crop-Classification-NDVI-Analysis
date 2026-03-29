@@ -2,14 +2,13 @@
 
 ![Status: Completed](https://img.shields.io/badge/Status-Completed-success)
 [![View Report](https://img.shields.io/badge/View-Full%20Report-blue?style=for-the-badge&logo=github)](https://dustinlit.github.io/Iowa-Crop-Classification-NDVI-Analysis/)
+[![Repository](https://img.shields.io/badge/GitHub-Repo-black?style=for-the-badge&logo=github)](https://github.com/dustinlit/Iowa-Crop-Classification-NDVI-Analysis)
 
----
-
-**Author:** Dustin Littlefield
-
-**Project Type:** Agricultural Remote Sensing Analysis
-
-**Tags:** `Remote Sensing` `Landsat 8` `ArcGIS Pro` `Crop Classification` `NDVI` `Machine Learning` `Random Trees` `Vegetation Health` `Corn` `Soybeans` `Iowa`
+**Author:** Dustin Littlefield  
+**Portfolio:** https://github.com/dustinlit  
+**Project Type:** `Agricultural Remote Sensing` `Crop Classification` `Vegetation Health`  
+**Technologies:** `Landsat 8` `ArcGIS Pro` `NDVI` `Machine Learning` `Random Trees`  
+**Last Updated:** March 2026
 
 ---
 
