@@ -1,80 +1,101 @@
-# Assessing Mid Season Crop Conditions in Iowa Using Supervised Classification and NDVI
+# Assessing Mid‑Season Crop Conditions in Iowa Using Supervised Classification and NDVI
 
 ![Status: Completed](https://img.shields.io/badge/Status-Completed-success)
-[![View Report](https://img.shields.io/badge/View-Full%20Report-blue?style=for-the-badge&logo=github)](https://dustinlit.github.io/Pennsylvania-Hydrology-ML-Streamflow-Forecasting/)
+[![View Report](https://img.shields.io/badge/View-Full%20Report-blue?style=for-the-badge&logo=github)](https://dustinlit.github.io/Iowa-Crop-Classification-NDVI-Analysis/)
 
 ---
 
 **Author:** Dustin Littlefield
 
-**Project Type:** Hydrology and Climate Analysis
+**Project Type:** Agricultural Remote Sensing Analysis
 
-**Tags:** `Hydrology` `Remote Sensing` `ArcGIS Pro` `Runoff Trends` `TerraClimate` `ArcGIS Space Time Cube` `Random Forest Forecasting`
+**Tags:** `Remote Sensing` `Landsat 8` `ArcGIS Pro` `Crop Classification` `NDVI` `Machine Learning` `Random Trees` `Vegetation Health` `Corn` `Soybeans` `Iowa`
 
+---
 
 ## Overview
-This project analyzes long‑term hydrologic change across Pennsylvania and builds a machine‑learning–based forecast of monthly streamflow using TerraClimate data (1958–2024). The workflow integrates spatial statistics, time‑series analysis, and Random Forest forecasting to identify climate‑driven trends in runoff and evaluate regional flood and drought risk.
+This project evaluates mid‑season crop conditions in Greene County, Iowa using multispectral Landsat 8 imagery and two core remote sensing techniques: supervised classification and NDVI‑based vegetation health assessment. A Random Trees classifier was trained using ground‑truth crop locations to distinguish corn, soybeans, natural vegetation, bare soil/built surfaces, and water. NDVI was then used to assess crop vigor during the July 2022 peak growing season.
+
+The workflow demonstrates how machine learning and spectral indices can support agricultural monitoring, yield assessment, and early detection of crop stress.
 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Figure 1.</strong> General watershed regions in Pennsylvania<br>
-    <em>Map Author: Dustin Littlefield PCS: NAD 1983 Pennsylvania North (Meters) Source: Watershed boundaries courtesy of the Pennsylvania Department of Environmental Protection (PADEP)</em> <br>
-
+    <strong>Figure 1.</strong> July 2022, Random Trees classification of Greene County, Iowa. The county relies on an almost equal amount of corn and soybeans interspersed throughout the county, both of which are staple crops of the U.S. agriculture industry. <br>
+    <em>Map Author: Dustin Littlefield PCS: WGS 1984 UTM Zone 15N Source: U.S. Geological Survey Landsat 8 Imagery</em>
   </figcaption>
-  <img src="figure_1.jpg" width="600">
-  </figure>
+  <img src="figure_2.jpg" width="600" alt="">
+</figure>
+<br>
 
 ## Data
 
-**Primary Data Source:** TerraClimate (1958–2024) <br>
-- Monthly 4‑km global climate and water‑balance variables, including Precipitation, Maximum Temperature (TMAX), Actual Evapotranspiration (AET), Runoff (Q), Soil Moisture, and Reference ET
+**Primary Data Source:** Landsat 8 Operational Land Imager (OLI)  
+- Six spectral bands used: Blue, Green, Red, NIR, SWIR1, SWIR2  
+- 30‑meter spatial resolution  
+- Acquired July 2022 during peak crop growth  
 
-**Spatial Data**
-- Pennsylvania HUC‑8 watershed boundaries (PA DEP)
+**Training & Validation Data**  
+- Ground‑truth crop locations for supervised classification  
+- USDA NASS Cropland Data Layer (CDL) for accuracy assessment  
 
 ## Methodology
-### Trend Analysis
-- Bivariate z‑score and p‑value mapping of long‑term runoff trends
-- Identifies statistically significant increases or stability in streamflow
-- Magenta = stable but significant; light blue = strong increasing trends
+### Supervised Classification
+- Random Trees classifier applied to multispectral Landsat 8 imagery  
+- Training schema built from known corn and soybean field locations  
+- Five land‑cover classes mapped:
+  - Corn  
+  - Soybeans  
+  - Natural Vegetation  
+  - Bare Soil / Built Surfaces  
+  - Water  
 
-### Spatiotemporal Correlation
-- Time Series Cross‑Correlation between TMAX and Runoff (Q)
-- Negative correlations dominate, especially in southwestern PA
-- Indicates higher drought sensitivity as temperatures rise
-- Example from report: “The darker blue shades indicate that this region is more sensitive to rising temperatures.”
+### Accuracy Assessment
+- 100 random validation points compared to USDA CDL  
+- Confusion matrix generated to evaluate:
+  - Overall accuracy  
+  - User’s accuracy  
+  - Producer’s accuracy  
+  - Cohen’s Kappa  
 
-### Random Forest Forecasting
-- Space‑Time Cube with monthly TerraClimate data
-- Hyperparameter tuning:
-    - Tree Depth: 20
-    - Leaf Size: default
-    - Training %: 100%
-    - Trees: 150 (RMSE = 13.20 mm/month)
-- Forecast generated for April 2025 to capture snowmelt
+### NDVI Analysis
+NDVI was calculated using the standard formula:
+
+<math display="block">
+  <mrow>
+    <mi>NDVI</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mi>NIR</mi>
+        <mo>−</mo>
+        <mi>Red</mi>
+      </mrow>
+      <mrow>
+        <mi>NIR</mi>
+        <mo>+</mo>
+        <mi>Red</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+<br>
+
+Higher NDVI values indicate healthier, more photosynthetically active vegetation.  
+Corn and soybean NDVI values were extracted and compared to expected seasonal norms.
+
 
 ## Results
-### Runoff Trends
-- Central and western PA show stable but significant trends
-- Northwest and eastern regions show strong increases in runoff
-- Indicates elevated flood risk in these areas
 
-### Temperature–Runoff Sensitivity
-- Strongest negative correlations in the Pittsburgh region
-- Higher temperatures → increased evapotranspiration → reduced runoff
-- Greater drought vulnerability in southwestern watersheds
+### Crop Distribution
+- Corn: **140,258 acres (38.3%)**  
+- Soybeans: **123,601 acres (33.8%)**  
+- Remaining area: natural vegetation, bare soil/built surfaces, and water  
 
-### Forecast Outputs (April 2025)
-- Highest predicted streamflow in Upper Susquehanna and Ohio River watersheds
-- Lower values in Lower Susquehanna and Potomac regions
-- Highest RMSE in the Delaware watershed and northern Ohio basin
-- Lowest RMSE in southern watersheds
+### NDVI Crop Health
+- Mean NDVI (Corn): **0.492**  
+- Mean NDVI (Soybeans): **0.457**  
+- Healthy corn typically peaks around **0.7–0.8** in late July  
+- 2022 values indicate **moderate crop vigor**, likely influenced by:
+  - Delayed planting due to wet spring  
+  - Hot, dry summer conditions  
 
-<figure>
-  <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Figure 2.</strong> ArcGIS Forest-Based forecast results for mean monthly streamflow in Pennsylvania. Predictions for April 2025 were modelled from monthly TerraClimate data (1958 – 2024) and are mapped with HUC-8 watershed regions in Pennsylvania to identify trends. Panels are: (1) April 2025 forecasted mean runoff, (2) Root Mean Square Error (RMSE) for predicted April 2025 mean runoff, and (3) Historical monthly mean runoff for April (1958 – 2024).<br>
-    <em>Map Author: Dustin Littlefield PCS: NAD 1983 Pennsylvania North (Meters) Source: Watershed boundaries courtesy of the Pennsylvania Department of Environmental Protection (PADEP)</em> <br>
-
-  </figcaption>
-  <img src="figure_5.jpg" width="400">
-  </figure>
