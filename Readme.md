@@ -19,10 +19,10 @@ The workflow demonstrates how machine learning and spectral indices can support 
 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Figure 1.</strong> July 2022, Random Trees classification of Greene County, Iowa. The county relies on an almost equal amount of corn and soybeans interspersed throughout the county, both of which are staple crops of the U.S. agriculture industry. <br>
+    <strong>Figure.</strong> July 2022, Random Trees classification of Greene County, Iowa. The county relies on an almost <br> equal amount of corn and soybeans interspersed throughout the county, both of which are staple crops <br> of the U.S. agriculture industry. <br>
     <em>Map Author: Dustin Littlefield PCS: WGS 1984 UTM Zone 15N Source: U.S. Geological Survey Landsat 8 Imagery</em>
   </figcaption>
-  <img src="figure_2.jpg" width="600" alt="">
+  <img src="figure_2.jpg" width="620" alt="">
 </figure>
 <br>
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: none
 ---
 
 # Assessing Mid Season Crop Conditions in Iowa Using Supervised Classification and NDVI
