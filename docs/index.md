@@ -34,18 +34,18 @@ After performing classification, it is necessary to demonstrate adequate perform
 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Figure 1.</strong> Heatmap of the confusion matrix for the classification raster versus USDA reference data.<br>
+    <strong>Figure 1.</strong> Heatmap of the confusion matrix for the classification raster versus <br> USDA reference data.<br>
   </figcaption>
-  <img src="Figures/figure_1.jpg" width="400">
+  <img src="Figures/figure_1.jpg" width="450">
 </figure>
 
 The overall classification accuracy is relatively low at 67% because of the confusion among the spectrally diverse classes, natural vegetation and bare soil/building/pavement. These surfaces may have a mixture of pixels that may have very similar spectral signatures to the targets. The primary targets of analysis, corn and soybeans, both have a moderately high user’s and producer’s accuracy, indicating reliable identification of these items. The kappa coefficient is also moderately high, which supports that even though our overall accuracy is low there are still meaningful classifications of the target items. 
 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Table 1.</strong> Data of the confusion matrix for the classification raster versus USDA reference data..<br>
+    <strong>Table 1.</strong> Data of the confusion matrix for the classification raster versus USDA <br> reference data.<br>
   </figcaption>
-  <img src="Figures/table_1.jpg" width="400">
+  <img src="Figures/table_1.jpg" width="450">
 </figure>
 								
 ### NDVI 
@@ -78,10 +78,10 @@ The classification in Figure 2 revealed that corn and soybean fields dominate Gr
 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Figure 2.</strong> July 2022, Random Trees classification of Greene County, Iowa. The county relies on an almost equal amount of corn and soybeans interspersed throughout the county, both of which are staple crops of the U.S. agriculture industry. <br>
+    <strong>Figure 2.</strong> July 2022, Random Trees classification of Greene County, Iowa. The county relies on an almost <br> equal amount of corn and soybeans interspersed throughout the county, both of which are staple crops <br> of the U.S. agriculture industry. <br>
     <em>Map Author: Dustin Littlefield PCS: WGS 1984 UTM Zone 15N Source: U.S. Geological Survey Landsat 8 Imagery</em>
   </figcaption>
-  <img src="Figures/figure_2.jpg" width="600" alt="">
+  <img src="Figures/figure_2.jpg" width="620" alt="">
 </figure>
 <br>
 
@@ -89,22 +89,19 @@ The analysis of the average NDVI of both crops of interest, .492 for corn and .4
 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
-    <strong>Figure 3.</strong> NDVI overlays of Sentinel‑2B images from pre‑ and post‑fire. Higher NDVI values (0.4–0.8, green) indicate healthy vegetation, and lower values (0–0.4, pink) indicate vegetation loss or bare soil.<br>
+    <strong>Figure 3.</strong> NDVI overlays of Sentinel‑2B images from pre‑ and post‑fire. Higher NDVI values (0.4–0.8, green) <br> indicate healthy vegetation, and lower values (0–0.4, pink) indicate vegetation loss or bare soil.<br>
     <em>Map Author: Dustin Littlefield PCS: WGS 1984 UTM Zone 15N Source: U.S. Geological Survey Landsat 8 Imagery</em>
   </figcaption>
-  <img src="Figures/figure_3.jpg" width="600" alt="">
-</figure>
-<br> 
+  <img src="Figures/figure_3.jpg" width="620" alt="">
+</figure> 
 
-Table 2. Mean NDVI and area by land cover class 
 <figure>
   <figcaption style="font-size:0.9em; margin-bottom:8px;">
     <strong>Table 2.</strong>  Mean NDVI and area by land cover class <br>
   </figcaption>
   <img src="Figures/table_2.jpg" width="400" alt="">
 </figure>
-<br> 
- 
+
 These results can aid decision making on both the county and individual farmer levels. County planners can adjust future agricultural planning utilizing overall yield predictions and crop quantification. A regular dashboard can provide seasonable reports to farmers about field conditions helping them adjust irrigation schedules, identify and address infestations or disease states, and monitor new fertilization and planting strategies. 
 
 ## Conclusion 
