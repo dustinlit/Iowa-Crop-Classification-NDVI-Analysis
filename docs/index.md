@@ -1,9 +1,3 @@
----
-layout: none
----
-
-# Assessing Mid Season Crop Conditions in Iowa Using Supervised Classification and NDVI
-
 ![Status: Completed](https://img.shields.io/badge/Status-Completed-success)
 [![View Report](https://img.shields.io/badge/View-Full%20Report-blue?style=for-the-badge&logo=github)](https://dustinlit.github.io/Iowa-Crop-Classification-NDVI-Analysis/)
 [![Repository](https://img.shields.io/badge/GitHub-Repo-black?style=for-the-badge&logo=github)](https://github.com/dustinlit/Iowa-Crop-Classification-NDVI-Analysis)
